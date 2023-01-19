@@ -1,5 +1,5 @@
 created: 20230116194107637
-modified: 20230117230706669
+modified: 20230119005901645
 tags: [[ASQ Assessment]]
 title: $:/asd/assessments/asq/templates/question
 type: text/vnd.tiddlywiki
@@ -18,10 +18,12 @@ type: text/vnd.tiddlywiki
         </$set>
     </$set>
     <$set name="answerPath" value={{{ [all[current]addsuffix[/answer]] }}}>
-        <$tiddler tiddler=<<jsonName>>>
-            <td><$radio index=<<answerPath>> value="10"> &nbsp; </$radio></td>
-            <td><$radio index=<<answerPath>> value="5"> &nbsp;</$radio></td>
-            <td><$radio index=<<answerPath>> value="0"> &nbsp;</$radio></td>
-        </$tiddler>
+        <td style="white-space: nowrap;">        
+            <$tiddler tiddler=<<jsonName>>>
+                <$radio index=<<answerPath>> value="10"> Yes </$radio> <br/>
+                <$radio index=<<answerPath>> value="5"> Sometimes</$radio><br/>
+                <$radio index=<<answerPath>> value="0"> Not Yet</$radio>
+            </$tiddler>
+        </td>
     </$set>
 </tr>

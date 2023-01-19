@@ -1,9 +1,0 @@
-author: Joerg Plewe
-core-version: >=5.0.8
-dependents: 
-description: use cloud9 editor ace
-plugin-type: plugin
-source: https://github.com/yourgithub/pluginname
-title: $:/plugins/innoq/ace
-type: application/json
-version: 0.0.1

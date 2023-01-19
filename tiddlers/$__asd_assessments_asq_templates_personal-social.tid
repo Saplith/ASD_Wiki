@@ -1,5 +1,5 @@
 created: 20230116195444489
-modified: 20230116195538205
+modified: 20230119010010693
 tags: [[ASQ Assessment]]
 title: $:/asd/assessments/asq/templates/personal-social
 type: text/vnd.tiddlywiki
@@ -9,13 +9,6 @@ type: text/vnd.tiddlywiki
 !! PERSONAL-SOCIAL
 
 <table>
-    <tr>
-        <th scope="col">Question</th>
-        <th scope="col">&nbsp;</th>
-        <th scope="col">Yes</th>
-        <th scope="col">Sometimes</th>
-        <th scope="col">Not Yet</th>
-    </tr>
     <$list filter="[<jsonName>keyvalues:key[PERSONAL-SOCIAL/questions/\d/question]removesuffix[/question]]" >
         {{||$:/asd/assessments/asq/templates/question}}
     </$list>
