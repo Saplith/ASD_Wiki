@@ -1,0 +1,42 @@
+created: 20230119131909780
+modified: 20230119145511317
+npv: 1
+ppv: 1
+sensitivity: .83
+source: www.google.com
+specificity: .86
+tags: [[Assessments And Tracking]] draft
+title: $:/asd/assessments/templates/reliabilityTable
+type: text/vnd.tiddlywiki
+
+<$if value={{{ [all[current]get[sensitivity]] [all[current]get[specificity]] [all[current]get[PPV]] [all[current]get[NPV]]  }}}>
+    <h3> Reliability </h3>
+    <table>
+        <$if value={{{ [all[current]get[sensitivity]] }}}>
+        <tr>
+            <td>[[Sensitivity]]</td>
+            <td>{{!!sensitivity}}</td>
+        </tr>
+        </$if>
+        <$if value={{{ [all[current]get[specificity]] }}}>
+        <tr>
+            <td>[[Specificity]]</td>
+            <td>{{!!specificity}}</td>
+        </tr>
+        </$if>
+        <$if value={{{ [all[current]get[ppv]] }}}>
+        <tr>
+            <td>[[PPV|Positive Predictive Value (PPV)]]</td>
+            <td>{{!!ppv}}</td>
+        </tr>
+        </$if>
+        <$if value={{{ [all[current]get[npv]] }}}>
+        <tr>
+            <td>[[NPV|Negative Predictive Value (NPV)]]</td>
+            <td>{{!!npv}}</td>
+        </tr>
+        </$if>
+    </table>
+    
+    <a href={{!!source}}>Source</a>
+</$if>

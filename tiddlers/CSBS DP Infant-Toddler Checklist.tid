@@ -1,7 +1,13 @@
+administered_by: caregivers
 ages: [[Infant]] [[Toddler]]
-category: Developmental Delay Screening
+category: screening
 created: 20230117152053481
-modified: 20230118034339872
+modified: 20230119145557876
+npv: 
+ppv: 
+sensitivity: 78%
+source: https://publications.aap.org/toolkits/pages/asd-screening-tools
+specificity: 84%
 tags: [[Assessments And Tracking]]
 title: CSBS DP Infant-Toddler Checklist
 type: text/vnd.tiddlywiki

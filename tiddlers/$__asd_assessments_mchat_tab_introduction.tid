@@ -1,10 +1,14 @@
 caption: Introduction
 created: 20230118015240255
-modified: 20230118015610847
+modified: 20230119153035286
 tags: [[M-CHAT Assessment]]
 title: $:/asd/assessments/mchat/tab/introduction
 type: text/vnd.tiddlywiki
 
-The [[M-CHAT-R/F|https://mchatscreen.com/]] is a 2-stage parent-report screening tool to assess risk for Autism Spectrum Disorder (ASD).
+<<callout note src:"$:/asd/assessments/mchat/tab/introduction/Callout01" >>
 
-The complete assessment can be viewed on the official website. The first stage is in the assessment tab for archival purposes.
+[[The M-CHAT-R/F|https://mchatscreen.com/]] is a 2-stage caregiver-report screening tool to assess risk for Autism Spectrum Disorder (ASD). It is intended for children between 16 and 30months of age. This assessment is the most common screening test for children in the United States. It is often used as [[level 1 screening|Level 1 Autism Screeners]] due to its significant false positive rate.
+
+The complete assessment can be viewed on the official website, however the first stage is in the assessment tab for archival purposes.
+
+{{||$:/asd/assessments/templates/reliabilityTable}}

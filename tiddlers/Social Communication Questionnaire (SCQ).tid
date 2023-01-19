@@ -1,0 +1,17 @@
+administered_by: professionals
+ages: [[School-Aged]] [[Preteen]] [[Teen]] [[Adult]] [[Young Adult]] T
+category: screening
+created: 20230119150932874
+modified: 20230119151659437
+npv: 
+ppv: 
+sensitivity: 85%
+source: https://publications.aap.org/toolkits/pages/asd-screening-tools?autologincheck=redirected
+specificity: 75%
+tags: [[Assessments And Tracking]]
+title: Social Communication Questionnaire (SCQ)
+type: text/vnd.tiddlywiki
+
+[[The Social Communication Questionnaire (SCQ)|https://www.wpspublish.com/scq-social-communication-questionnaire.html]] is a parent questionaire for people over the age of 4. The scoring of the questionaire will be done by a developmental professional.
+
+{{||$:/asd/assessments/templates/reliabilityTable}}

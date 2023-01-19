@@ -1,5 +1,5 @@
 created: 20230116032628372
-modified: 20230118023407247
+modified: 20230119160858175
 tags: 
 title: Welcome!
 type: text/vnd.tiddlywiki
@@ -8,4 +8,6 @@ This is a work in progress. This copy of the wiki an incomplete version.
 
 Changelog:
 
-* Added [[common parental screening assessments|Assessments And Tracking]]. All assessments are fully interactable
+* [1/19] Added a [[Glossary]] of terms that people may not know.
+* [1/19] Added information for all common screeners to [[Assessments And Tracking]]. Added a little more structure to that page,
+* [1/17] Added [[common parental screening assessments|Assessments And Tracking]]. All caregiver assessments are fully interactable

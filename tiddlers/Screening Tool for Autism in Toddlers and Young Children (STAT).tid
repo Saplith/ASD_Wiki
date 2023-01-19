@@ -1,0 +1,17 @@
+administered_by: professionals
+ages: [[Toddler]]
+category: screening
+created: 20230119101259780
+modified: 20230119153538853
+npv: 90%
+ppv: 77%
+sensitivity: 83%
+source: https://publications.aap.org/toolkits/pages/asd-screening-tools
+specificity: 86%
+tags: [[Assessments And Tracking]]
+title: Screening Tool for Autism in Toddlers and Young Children (STAT)
+type: text/vnd.tiddlywiki
+
+[[Screening Tool for Autism in Toddlers and Young Children (STAT)|https://stat.vueinnovations.com/]] is a [[level 2|Level 2 Autism Screeners]] interactive screening tool comprising of twelve activities that assess play, communication, and imitation. It is intended for use in toddlers between 24 and 36 months.
+
+{{||$:/asd/assessments/templates/reliabilityTable}}

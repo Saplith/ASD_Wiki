@@ -1,8 +1,14 @@
+administered_by: caregivers
 ages: [[Infant]] [[Toddler]]
-category: Autism Screening
+category: screening
 created: 20230118015142647
 json: $:/asd/assessments/mchat/data/mchat.json
-modified: 20230118034312326
+modified: 20230119145617296
+npv: 
+ppv: 45%
+sensitivity: 91%
+source: https://publications.aap.org/toolkits/pages/asd-screening-tools
+specificity: 95%
 tags: [[Assessments And Tracking]]
 title: M-CHAT-R/F Assessment
 type: text/vnd.tiddlywiki

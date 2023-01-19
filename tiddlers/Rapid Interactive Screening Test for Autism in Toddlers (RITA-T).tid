@@ -1,0 +1,17 @@
+administered_by: professionals
+ages: [[Toddler]]
+category: screening
+created: 20230119145935909
+modified: 20230119153159726
+npv: 94%
+ppv: 88%
+sensitivity: 100%
+source: https://publications.aap.org/toolkits/pages/asd-screening-tools?autologincheck=redirected
+specificity: 84%
+tags: [[Assessments And Tracking]]
+title: Rapid Interactive Screening Test for Autism in Toddlers (RITA-T)
+type: text/vnd.tiddlywiki
+
+[[RITA-T|https://www.childrenshospital.org/research/labs/rita-t-research/about-test]] is a healthcare provider performed [[level 2 screening|Level 2 Autism Screeners]] test for autism. It is intended for children between 18 and 36 months of age.
+
+{{||$:/asd/assessments/templates/reliabilityTable}}

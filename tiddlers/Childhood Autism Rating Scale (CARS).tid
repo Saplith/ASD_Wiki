@@ -1,0 +1,17 @@
+administered_by: professionals
+ages: [[Toddler]] [[Preschooler]] [[School-Aged]]
+category: screening
+created: 20230119154759180
+modified: 20230119155133917
+npv: 
+ppv: 
+sensitivity: 71-86%
+source: https://pubmed.ncbi.nlm.nih.gov/30977125/
+specificity: 75-79%
+tags: [[Assessments And Tracking]]
+title: Childhood Autism Rating Scale (CARS)
+type: text/vnd.tiddlywiki
+
+[[Childhood Autism Rating Scale (CARS)|https://www.research.chop.edu/car-autism-roadmap/childhood-autism-rating-scale-2nd-edition-cars2]] is a [[level 2 screening|Level 2 Autism Screeners]] test for children under 6 years old.
+
+{{||$:/asd/assessments/templates/reliabilityTable}}
