@@ -1,0 +1,70 @@
+created: 20230117140922684
+modified: 20230117150006628
+tags: $:/tags/Macro
+title: $:/asd/macros/ibox
+type: text/vnd.tiddlywiki
+
+\define ibox(image, caption, template:"$:/asd/macros/ibox/lightbox", btn-class:"ibox-btn", direct, title,)
+<$reveal type=match text="" default="$direct$">
+    <$button class="$btn-class$">
+        <$action-sendmessage $message="tm-modal" $param="$template$" image="$image$" caption="$caption$" subtitle="$title$" />
+        <$image source="$image$"/>
+    </$button>
+</$reveal>
+<$reveal type=nomatch text="" default="$direct$">
+    <$button class="$btn-class$">
+        <$action-sendmessage $message="tm-modal" $param="$image$" subtitle="$title$" />
+        <$image source="$image$"/>
+    </$button>
+</$reveal>
+<style>
+.ibox-btn{
+padding:5px;
+}
+
+.ibox-btn img{
+width:150px;
+}
+
+.tc-modal .tc-modal-body > div > img{
+ width:100%;
+}
+</style>
+\end
+
+`<<ibox image [caption] [template] [btn-class] [direct] [title]>>`
+
+|!#|!Parameter|!Description|!Default|
+|1|''image'' |the image tiddler| |
+|2|''caption'' |a custom caption<br>» defaults to ''caption'' field at image| |
+|3|''template'' |the template for the modal dialog|[[$:/asd/macros/ibox/lightbox]]|
+|4|''btn-class'' |the css class for the image button|`ibox-btn`|
+|5|''direct'' |when set to `direct:yes` use the image tiddler as the modal template||
+|5|''title'' |when set to `title:yes` use text as modal's title||
+
+;example image
+:[[$:/asd/macros/ibox/kitten.jfif]]
+
+Using a custom title
+
+`<<ibox $:/asd/macros/ibox/kitten.jfif title:"A custom title">>`
+
+<<ibox $:/asd/macros/ibox/kitten.jfif title:"A custom title">>
+
+simple image button using ''caption'' field at the image
+
+`<<ibox $:/asd/macros/ibox/kitten.jfif>>`
+
+<<ibox $:/asd/macros/ibox/kitten.jfif>>
+
+image button with custom caption
+
+`<<ibox $:/asd/macros/ibox/kitten.jfif "amazing ligths">>`
+
+<<ibox $:/asd/macros/ibox/kitten.jfif "amazing ligths">>
+
+just the image — displays image name as modal title, no captions though
+
+`<<ibox $:/asd/macros/ibox/kitten.jfif direct:yes>>`
+
+<<ibox $:/asd/macros/ibox/kitten.jfif direct:yes>>

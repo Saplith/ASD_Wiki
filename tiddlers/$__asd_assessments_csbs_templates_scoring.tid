@@ -1,0 +1,67 @@
+age: 6 months
+created: 20230117233154974
+json: $:/asd/assessments/csbs/data/csbs-checklist.json
+modified: 20230118002716382
+tags: [[CSBS Assessment]]
+title: $:/asd/assessments/csbs/templates/scoring
+type: text/vnd.tiddlywiki
+
+!! Score
+
+Age: <$select tiddler=<<currentTiddler>> field="age">
+    <$list filter='[range[6],[24]addsuffix[ months]]'>
+        <option value=<<currentTiddler>>><$view field='title'/></option>
+    </$list>
+</$select>
+
+<$set name="jsonName" value={{!!json}}>
+    <$set name="age" value={{!!age}}>
+        <$set name="communicationCutoffPath" value={{{ [<age>addprefix[Cutoff/COMMUNICATION/]] }}}>
+            <$set name="communicationScore" value={{{ [<jsonName>keyvalues:value[Emotion and Eye Gaze/questions/\d/options/answer]] =[<jsonName>keyvalues:value[Communication/questions/\d/options/answer]] =[<jsonName>keyvalues:value[Gestures/questions/\d/options/answer]] +[sum[]]}}}>
+                Communication: <$text text=<<communicationScore>> />,
+                <$if value=<<communicationScore>> match="0">
+                Delayed
+                </$if>
+                <$else-if value={{{[<jsonName>keyvalues:value<communicationCutoffPath>compare:number:gt<communicationScore>]}}}>
+                Delayed
+                </$else-if>
+                <$else>
+                On Track
+                </$else>
+                
+            </$set>
+        </$set>
+        <br/>
+            
+        <$set name="speechCutoffPath" value={{{ [<age>addprefix[Cutoff/EXPRESSIVE SPEECH/]] }}}>
+            <$set name="speechScore" value={{{ =[<jsonName>keyvalues:value[Sounds/questions/\d/options/answer]] =[<jsonName>keyvalues:value[Words/questions/\d/options/answer]] +[sum[]] }}}>
+                Expressive Speech: <$text text=<<speechScore>> />,
+                <$if value=<<speechScore>> match="0">
+                Delayed
+                </$if>
+                <$else-if value={{{[<jsonName>keyvalues:value<speechCutoffPath>compare:number:gt<speechScore>]}}}>
+                Delayed
+                </$else-if>
+                <$else>
+                On Track
+                </$else>
+            </$set>
+        </$set>
+        <br/>
+            
+        <$set name="symbolicCutoffPath" value={{{ [<age>addprefix[Cutoff/SYMBOLIC/]] }}}>
+            <$set name="symbolicScore" value={{{ =[<jsonName>keyvalues:value[Understanding/questions/\d/options/answer]] =[<jsonName>keyvalues:value[Object Use/questions/\d/options/answer]] +[sum[]] }}}>
+                Symbolic: <$text text=<<symbolicScore>> />,
+                <$if value=<<symbolicScore>> match="0">
+                Delayed
+                </$if>
+                <$else-if value={{{[<jsonName>keyvalues:value<symbolicCutoffPath>compare:number:gt<symbolicScore>]}}}>
+                Delayed
+                </$else-if>
+                <$else>
+                On Track
+                </$else>
+            </$set>
+        </$set>
+    </$set>
+</$set>

@@ -1,0 +1,30 @@
+created: 20230116194807077
+modified: 20230116194846221
+tags: [[ASQ Assessment]]
+title: $:/asd/assessments/asq/templates/gross motor
+type: text/vnd.tiddlywiki
+
+<$set name="jsonName" value={{{ [all[current]get[json]] }}}>
+
+!! GROSS MOTOR
+
+<table>
+    <tr>
+        <th scope="col">Question</th>
+        <th scope="col">&nbsp;</th>
+        <th scope="col">Yes</th>
+        <th scope="col">Sometimes</th>
+        <th scope="col">Not Yet</th>
+    </tr>
+    <$list filter="[<jsonName>keyvalues:key[GROSS MOTOR/questions/\d/question]removesuffix[/question]]" >
+        {{||$:/asd/assessments/asq/templates/question}}
+    </$list>
+</table>
+
+<$set name="score" value={{{ [<jsonName>keyvalues:value[GROSS MOTOR/questions/\d/answer]sum[]] }}}>
+    Gross Motor Total: <<score>> 
+    
+    {{||$:/asd/assessments/asq/templates/outcome}}
+</$set>
+
+</$set>

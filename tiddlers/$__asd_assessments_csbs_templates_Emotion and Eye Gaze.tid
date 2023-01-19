@@ -1,0 +1,16 @@
+created: 20230117205501682
+json: $:/asd/assessments/csbs/data/csbs-checklist.json
+modified: 20230117231926110
+tags: [[CSBS Assessment]]
+title: $:/asd/assessments/csbs/templates/Emotion and Eye Gaze
+type: text/vnd.tiddlywiki
+
+!! Emotion and Eye Gaze
+
+<$set name="jsonName" value={{!!json}}>
+    <table>
+        <$list filter="[<jsonName>keyvalues:key[Emotion and Eye Gaze/questions/\d/question]]">
+           {{||$:/asd/assessments/csbs/templates/question}}
+        </$list>
+    </table>
+</$set>

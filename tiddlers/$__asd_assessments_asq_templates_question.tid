@@ -1,0 +1,27 @@
+created: 20230116194107637
+modified: 20230117230706669
+tags: [[ASQ Assessment]]
+title: $:/asd/assessments/asq/templates/question
+type: text/vnd.tiddlywiki
+
+<tr>
+    <$set name="questionPath" value={{{ [all[current]addsuffix[/question]] }}}>
+        <td><$text text={{{ [<jsonName>keyvalues:value<questionPath>] }}}/></td>
+        <$set name="imagePath" value={{{ [all[current]addsuffix[/image]] }}}>
+            <td>
+                <$if value={{{ [<jsonName>keyvalues:value<imagePath>] }}}>
+                    <$macrocall $name="ibox" 
+                        image={{{ [<jsonName>keyvalues:value<imagePath>] }}}
+                        title={{{ [<jsonName>keyvalues:value<questionPath>] }}} />
+                </$if>
+             </td>
+        </$set>
+    </$set>
+    <$set name="answerPath" value={{{ [all[current]addsuffix[/answer]] }}}>
+        <$tiddler tiddler=<<jsonName>>>
+            <td><$radio index=<<answerPath>> value="10"> &nbsp; </$radio></td>
+            <td><$radio index=<<answerPath>> value="5"> &nbsp;</$radio></td>
+            <td><$radio index=<<answerPath>> value="0"> &nbsp;</$radio></td>
+        </$tiddler>
+    </$set>
+</tr>

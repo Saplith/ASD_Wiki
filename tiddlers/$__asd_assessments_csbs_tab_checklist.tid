@@ -1,0 +1,26 @@
+caption: Checklist
+created: 20230117152325339
+json: $:/asd/assessments/csbs/data/csbs-checklist.json
+modified: 20230117233237923
+tags: [[CSBS Assessment]]
+title: $:/asd/assessments/csbs/tab/checklist
+type: text/vnd.tiddlywiki
+
+Please check all the choices that best describe your child’s behavior. If you are not sure, please choose the closest response based on your experience. ''Children
+at your child’s age are not necessarily expected to use all the behaviors listed.''
+
+{{$:/asd/assessments/csbs/templates/Emotion and Eye Gaze}}
+
+{{$:/asd/assessments/csbs/templates/Communication}}
+
+{{$:/asd/assessments/csbs/templates/Gestures}}
+
+{{$:/asd/assessments/csbs/templates/Sounds}}
+
+{{$:/asd/assessments/csbs/templates/Words}}
+
+{{$:/asd/assessments/csbs/templates/Understanding}}
+
+{{$:/asd/assessments/csbs/templates/Object Use}}
+
+{{$:/asd/assessments/csbs/templates/scoring}}

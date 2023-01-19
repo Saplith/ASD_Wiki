@@ -1,0 +1,30 @@
+created: 20230116195013891
+modified: 20230116195056169
+tags: [[ASQ Assessment]]
+title: $:/asd/assessments/asq/templates/fine motor
+type: text/vnd.tiddlywiki
+
+<$set name="jsonName" value={{{ [all[current]get[json]] }}}>
+
+!! FINE MOTOR
+
+<table>
+    <tr>
+        <th scope="col">Question</th>
+        <th scope="col">&nbsp;</th>
+        <th scope="col">Yes</th>
+        <th scope="col">Sometimes</th>
+        <th scope="col">Not Yet</th>
+    </tr>
+    <$list filter="[<jsonName>keyvalues:key[FINE MOTOR/questions/\d/question]removesuffix[/question]]" >
+        {{||$:/asd/assessments/asq/templates/question}}
+    </$list>
+</table>
+
+<$set name="score" value={{{ [<jsonName>keyvalues:value[FINE MOTOR/questions/\d/answer]sum[]] }}}>
+    Fine Motor Total: <<score>> 
+    
+    {{||$:/asd/assessments/asq/templates/outcome}}
+</$set>
+
+</$set>

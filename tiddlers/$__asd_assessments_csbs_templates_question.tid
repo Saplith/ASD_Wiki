@@ -1,0 +1,29 @@
+created: 20230117220143713
+modified: 20230117232512340
+tags: [[CSBS Assessment]]
+title: $:/asd/assessments/csbs/templates/question
+type: text/vnd.tiddlywiki
+
+<tr>
+    <td> 
+        <$text text={{{ [<jsonName>keyvalues:value<currentTiddler>] }}}/>
+    </td>
+    <td style="white-space: nowrap;">
+        <$set name="optionsPath" value={{{ [all[current]removesuffix[question]addsuffix[options/\d/option]]}}}>
+            <$set name="answerPath" value={{{ [all[current]removesuffix[question]addsuffix[options/answer]]}}}>
+                <$list filter="[<jsonName>keyvalues:key<optionsPath>]">
+                    <$set name="optionPath" value=<<currentTiddler>>>
+                        <$set name="pointsPath" value={{{ [all[current]removesuffix[option]addsuffix[points]] }}}>
+                            <$tiddler tiddler=<<jsonName>>>
+                                <$radio index={{{ [<jsonName>keyvalues:key<answerPath>] }}} value={{{ [<jsonName>keyvalues:value<pointsPath>] }}}>
+                                    <$text text={{{ [<jsonName>keyvalues:value<optionPath>] }}} />
+                                </$radio>
+                                <br/>
+                            </$tiddler>
+                        </$set>
+                    </$set>
+                </$list>
+           </$set>
+       </$set>
+    </td>
+</tr>

@@ -1,0 +1,16 @@
+created: 20230117205543284
+json: $:/asd/assessments/csbs/data/csbs-checklist.json
+modified: 20230117232019359
+tags: [[CSBS Assessment]]
+title: $:/asd/assessments/csbs/templates/Communication
+type: text/vnd.tiddlywiki
+
+!! Communication
+
+<$set name="jsonName" value={{!!json}}>
+    <table>
+        <$list filter="[<jsonName>keyvalues:key[Communication/questions/\d/question]]">
+           {{||$:/asd/assessments/csbs/templates/question}}
+        </$list>
+    </table>
+</$set>

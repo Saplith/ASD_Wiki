@@ -1,0 +1,16 @@
+created: 20230117205638751
+json: $:/asd/assessments/csbs/data/csbs-checklist.json
+modified: 20230117232240257
+tags: [[CSBS Assessment]]
+title: $:/asd/assessments/csbs/templates/Sounds
+type: text/vnd.tiddlywiki
+
+!! Sounds
+
+<$set name="jsonName" value={{!!json}}>
+    <table>
+        <$list filter="[<jsonName>keyvalues:key[Sounds/questions/\d/question]]">
+           {{||$:/asd/assessments/csbs/templates/question}}
+        </$list>
+    </table>
+</$set>

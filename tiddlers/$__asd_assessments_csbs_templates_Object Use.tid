@@ -1,0 +1,16 @@
+created: 20230117205730687
+json: $:/asd/assessments/csbs/data/csbs-checklist.json
+modified: 20230117232200075
+tags: [[CSBS Assessment]]
+title: $:/asd/assessments/csbs/templates/Object Use
+type: text/vnd.tiddlywiki
+
+!! Object Use
+
+<$set name="jsonName" value={{!!json}}>
+    <table>
+        <$list filter="[<jsonName>keyvalues:key[Object Use/questions/\d/question]]">
+           {{||$:/asd/assessments/csbs/templates/question}}
+        </$list>
+    </table>
+</$set>

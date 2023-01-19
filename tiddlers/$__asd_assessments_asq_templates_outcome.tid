@@ -1,0 +1,16 @@
+created: 20230116194653949
+modified: 20230116194709728
+tags: [[ASQ Assessment]]
+title: $:/asd/assessments/asq/templates/outcome
+type: text/vnd.tiddlywiki
+
+    <$set name="intervention" value={{{ [<jsonName>keyvalues:value[intervention]] }}}>
+    <$set name="monitor" value={{{ [<jsonName>keyvalues:value[monitor]] }}}>
+    
+        <$if   value={{{ [<score>compare:number:lt<intervention>] }}}> Status: Intervention needed  </$if>
+        <$else-if   value={{{ [<score>compare:number:lt<intervention>] }}} match=0> Status: Intervention needed  </$else-if>
+        <$else-if   value={{{ [<score>compare:number:lt<monitor>] }}}> Status: Monitor </$else-if>
+        <$else >  Status: On track  </$else>
+    
+    </$set>
+    </$set>

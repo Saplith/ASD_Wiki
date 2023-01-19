@@ -1,0 +1,16 @@
+created: 20230117205612112
+json: $:/asd/assessments/csbs/data/csbs-checklist.json
+modified: 20230118021957582
+tags: [[CSBS Assessment]]
+title: $:/asd/assessments/csbs/templates/Gestures
+type: text/vnd.tiddlywiki
+
+!! Gestures
+
+<$set name="jsonName" value={{!!json}}>
+    <table style="width:100%;">
+        <$list filter="[<jsonName>keyvalues:key[Gestures/questions/\d/question]]">
+           {{||$:/asd/assessments/csbs/templates/question}}
+        </$list>
+    </table>
+</$set>

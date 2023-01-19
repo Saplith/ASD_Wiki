@@ -1,0 +1,30 @@
+created: 20230116170852611
+modified: 20230117210321647
+tags: [[ASQ Assessment]]
+title: $:/asd/assessments/asq/templates/communication
+type: text/vnd.tiddlywiki
+
+<$set name="jsonName" value={{{ [all[current]get[json]] }}}>
+
+!! COMMUNICATION
+
+<table>
+    <tr>
+        <th scope="col">Question</th>
+        <th scope="col">&nbsp;</th>
+        <th scope="col">Yes</th>
+        <th scope="col">Sometimes</th>
+        <th scope="col">Not Yet</th>
+    </tr>
+    <$list filter="[<jsonName>keyvalues:key[COMMUNICATION/questions/\d/question]removesuffix[/question]]" >
+        {{||$:/asd/assessments/asq/templates/question}}
+    </$list>
+</table>
+
+<$set name="score" value={{{ [<jsonName>keyvalues:value[COMMUNICATION/questions/\d/answer]sum[]] }}}>
+    Communication Total: <<score>> 
+    
+    {{||$:/asd/assessments/asq/templates/outcome}}
+</$set>
+
+</$set>

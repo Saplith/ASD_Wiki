@@ -1,0 +1,24 @@
+caption: Questionaire
+created: 20230116133716346
+json: $:/asd/assessments/asq/data/ASQ-60m.json
+modified: 20230117150631953
+tags: [[ASQ Assessment]]
+title: $:/asd/assessments/asq/tab/Questionaire
+type: text/vnd.tiddlywiki
+
+''Select Questionaire:'' <$select field='json'>
+<$list filter='[all[shadows+tiddlers]data-type[ASQ]sort[title]]'>
+* <option value=<<currentTiddler>>><$view field='text' index='title'/></option>
+</$list>
+</$select>
+
+''Intended age range: '' <$text text={{{ [all[current]get[json]getindex[age-range]] }}}/>
+
+Click on the images to enlarge
+
+{{||$:/asd/assessments/asq/templates/communication}}
+{{||$:/asd/assessments/asq/templates/gross motor}}
+{{||$:/asd/assessments/asq/templates/fine motor}}
+{{||$:/asd/assessments/asq/templates/problem solving}}
+{{||$:/asd/assessments/asq/templates/personal-social}}
+
