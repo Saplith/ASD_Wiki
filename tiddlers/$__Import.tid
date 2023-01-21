@@ -4,4 +4,7 @@ type: text/vnd.tiddlywiki
 
 The following tiddlers were imported:
 
-# [[$:/plugins/innoq/ace]]
+# [[$:/plugins/tiddlywiki/codemirror-autocomplete]]
+# [[$:/plugins/tiddlywiki/codemirror-fullscreen]]
+# [[$:/plugins/tiddlywiki/codemirror-closetag]]
+# [[$:/plugins/tiddlywiki/codemirror-closebrackets]]
